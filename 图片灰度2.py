@@ -4,7 +4,7 @@ import numpy as np
 from skimage import io, color
 
 # 读取图片并转换成灰度图片
-img = io.imread ('in_img/kb.jpg')
+img = io.imread ('art-of-shaizi/in_img/kb.jpg')
 # 去掉alpha通道，只保留前三个通道
 img = img [:,:,:3]
 gray = color.rgb2gray (img)
@@ -50,13 +50,13 @@ for row in graded_matrix:
 dice_images = []
 
 # 添加图片的路径或者链接，按照点数的顺序排列
-dice_images.append ('source_shaizi/shaizi/0.jpg')
-dice_images.append ('source_shaizi/shaizi/1.jpg')
-dice_images.append ('source_shaizi/shaizi/2.jpg')
-dice_images.append ('source_shaizi/shaizi/3.jpg')
-dice_images.append ('source_shaizi/shaizi/4.jpg')
-dice_images.append ('source_shaizi/shaizi/5.jpg')
-dice_images.append ('source_shaizi/shaizi/6.jpg')
+dice_images.append ('art-of-shaizi/source_shaizi/shaizi/0.jpg')
+dice_images.append ('art-of-shaizi/source_shaizi/shaizi/1.jpg')
+dice_images.append ('art-of-shaizi/source_shaizi/shaizi/2.jpg')
+dice_images.append ('art-of-shaizi/source_shaizi/shaizi/3.jpg')
+dice_images.append ('art-of-shaizi/source_shaizi/shaizi/4.jpg')
+dice_images.append ('art-of-shaizi/source_shaizi/shaizi/5.jpg')
+dice_images.append ('art-of-shaizi/source_shaizi/shaizi/6.jpg')
 shaizixiangsu=10  #10X10的骰子图片
 # 创建一个新的画布，大小为图片的宽度乘以矩阵的行数，高度为图片的高度乘以矩阵的列数
 canvas = Image.new ('RGB', (shaizixiangsu * len (graded_matrix [0]), shaizixiangsu * len (graded_matrix)))
@@ -79,4 +79,4 @@ for i in range (len (graded_matrix)):
 # 显示画布
 canvas.show ()
 # 保存画布
-canvas.save('out_img/kb.png')
+canvas.save('art-of-shaizi/out_img/kb.png')
